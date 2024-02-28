@@ -1,0 +1,63 @@
+body:after {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+:root {
+  /* Colors */
+  --bg: #fff;
+  --bg-alt: #333;
+  --bg-alt-2: #f0f0f0;
+  --bg-transparent: #ffffffe8;
+  --border: 0.01rem solid #333;
+  --text: #333;
+  --text-alt: #fff;
+
+  /* --sun: url("../assets/sun.png"); */
+}
+
+/* DARK MODE */
+
+:root.dark-mode {
+  --bg: #202124;
+  --bg-alt: #3c3d40;
+  --bg-alt-2: #333;
+  --bg-transparent: #333333f5;
+  --border: 0.01rem solid #5a5a5a;
+  --text: #fff;
+
+  /* --moon: url("../assets/moon.png"); */
+}
+
+/* COLOR MODE TOGGLE BUTTON */
+
+#color-mode {
+  background: var(--bg-alt-2);
+  height: 2.75rem;
+  width: 4rem;
+  border-radius: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#toggle-button {
+  background-image: var(--sun);
+  background-size: cover;
+  cursor: pointer;
+}
+
+.dark-mode #toggle-button {
+  background-image: var(--moon);
+}
+
+.dark-mode #color-mode {
+  justify-content: flex-end;
+}
