@@ -13,6 +13,8 @@ const trContent = document.querySelector("#grid__tr__content");
 const blContent = document.querySelector("#grid__bl__content");
 const brContent = document.querySelector("#grid__br__content");
 
+const projectZero = document.querySelector(".p-0");
+const projectZeroOne = document.querySelector(".p-01");
 const projectOne = document.querySelector(".p-1");
 const projectTwo = document.querySelector(".p-2");
 const projectThree = document.querySelector(".p-3");
@@ -153,6 +155,13 @@ function handleWindowResize() {
         tlBtn.style.zIndex = "100";
         blBtn.style.zIndex = "300";
         brBtn.style.zIndex = "100";
+
+        projectZero.style.width = "40%";
+        projectZero.style.margin = "auto auto 0.5rem";
+
+        projectZeroOne.style.width = "40%";
+        projectZeroOne.style.margin = "auto auto 0.5rem";
+
         projectOne.style.width = "40%";
         projectOne.style.margin = "auto auto 0.5rem";
         projectTwo.style.width = "40%";
